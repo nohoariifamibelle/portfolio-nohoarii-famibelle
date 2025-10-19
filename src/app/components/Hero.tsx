@@ -15,7 +15,7 @@ export default function Hero() {
           <div className="space-y-4">
             <h1 className="text-5xl xl:text-6xl font-bold leading-tight">
               Je transforme vos idées en{" "}
-              <span className="text-[#077EA2]">
+              <span className="text-blueSurf">
                 applications web performantes
               </span>
             </h1>
@@ -29,7 +29,7 @@ export default function Hero() {
 
           <div className="flex items-center gap-4">
             <button
-              className="bg-[#077EA2] hover:bg-white text-white hover:text-black border border-transparent hover:border-black hover:cursor-pointer px-6 py-4 text-base font-medium rounded-lg transition-colors duration-300 
+              className="bg-blueSurf hover:bg-white text-white hover:text-black border border-transparent hover:border-black hover:cursor-pointer px-6 py-4 text-base font-medium rounded-lg transition-colors duration-300 
 "
             >
               DEVIS GRATUIT

@@ -42,6 +42,7 @@ import right_arrow from "./right-arrow.png";
 import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
+import profile_user from "./profile_user.png";
 
 // ------------------ Objet assets ------------------
 export const assets = {
@@ -82,6 +83,7 @@ export const assets = {
   send_icon,
   right_arrow_bold,
   right_arrow_bold_dark,
+  profile_user,
 };
 
 // ------------------ Types ------------------
@@ -158,20 +160,20 @@ export const infoList: InfoItem[] = [
   {
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
-    title: "Languages",
+    title: "Compétences clés",
     description: "HTML, CSS, JavaScript React Js, Next Js",
   },
   {
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
-    title: "Education",
-    description: "B.Tech in Computer Science",
+    title: "Diplômes",
+    description: "Bachelor Développement Web",
   },
   {
     icon: assets.project_icon,
     iconDark: assets.project_icon_dark,
-    title: "Projects",
-    description: "Built more than 5 projects",
+    title: "Projets",
+    description: "Contribution dans plus de 30 projets",
   },
 ];
 

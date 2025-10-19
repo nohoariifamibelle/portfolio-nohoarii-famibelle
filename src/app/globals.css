@@ -4,6 +4,10 @@
   --color-lightHover: #fcf4ff;
   --color-darkHover: #2a004a;
   --color-darkTheme: #11001f;
+  --color-blueSurf: #077ea2;
+
+  --shadow-black: 4px 4px 0 #000;
+  --shadow-white: 4px 4px 0 #fff;
 
   --font-family-outfit: var(--font-outfit), sans-serif;
   --font-family-roboto: var(--font-roboto), sans-serif;
