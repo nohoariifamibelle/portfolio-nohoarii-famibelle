@@ -43,6 +43,20 @@ import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 import profile_user from "./profile_user.png";
+import react_icon from "./react-icon.svg";
+import nextjs_icon from "./nextjs-icon.svg";
+import node_icon from "./nodejs-icon.svg";
+import tailwindcss_icon from "./tailwindcss-icon.svg";
+import css3_icon from "./css3-icon.svg";
+import html5_icon from "./html5-icon.svg";
+import javascript_icon from "./javascript-icon.svg";
+import typescript_icon from "./typescript-icon.svg";
+import mongodb_icon from "./mongodb-icon.svg";
+import firebase_icon from "./firebase-icon.svg";
+import figma_icon from "./figma-icon.svg";
+import github_icon from "./github-icon.svg";
+import git_icon from "./git-icon.svg";
+import vscode_icon from "./vscode-icon.svg";
 
 // ------------------ Objet assets ------------------
 export const assets = {
@@ -84,6 +98,20 @@ export const assets = {
   right_arrow_bold,
   right_arrow_bold_dark,
   profile_user,
+  react_icon,
+  nextjs_icon,
+  node_icon,
+  tailwindcss_icon,
+  css3_icon,
+  html5_icon,
+  javascript_icon,
+  typescript_icon,
+  mongodb_icon,
+  firebase_icon,
+  figma_icon,
+  github_icon,
+  git_icon,
+  vscode_icon,
 };
 
 // ------------------ Types ------------------

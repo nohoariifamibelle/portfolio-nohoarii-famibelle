@@ -1,4 +1,4 @@
-import { MapPin, Mail } from "lucide-react";
+import { MapPin, Mail, Map } from "lucide-react";
 import Image from "next/image";
 import { assets } from "../../../assets/assets";
 
@@ -7,9 +7,9 @@ export default function Hero() {
     <section className="min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-7xl w-full mx-auto grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8 order-2 lg:order-1">
-          <div className="inline-flex items-center gap-2 px-4 py-2 border border-blue-600/30 rounded-full text-sm text-gray-700">
-            <MapPin className="w-4 h-4 text-[#077EA2]" />
-            <span>Basé sur Paris · Disponible à distance</span>
+          <div className="inline-flex items-center gap-2 bg-white text-blueSurf border-blueSurf border px-4 py-2 rounded-full lg:text-lg text-sm font-light mb-6">
+            <MapPin className="w-6 h-6" />
+            Basé sur Paris • Disponible à distance
           </div>
 
           <div className="space-y-4">
@@ -21,18 +21,20 @@ export default function Hero() {
             </h1>
           </div>
 
-          <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
-            Développeur Web Fullstack spécialisé dans la création
-            d&apos;interfaces modernes et d&apos;expériences utilisateur
-            optimisées pour la conversion.
+          <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
+            Développeur Web Fullstack spécialisé en Next.js, j&apos;accompagne
+            les PME dans la création de sites performants, modernes et orientés
+            résultats. <br /> Chaque projet est guidé par l&apos;analyse, le
+            design et la performance pour transformer votre présence en ligne en
+            véritable levier de croissance.
           </p>
 
           <div className="flex items-center gap-4">
             <button
-              className="bg-blueSurf hover:bg-white text-white hover:text-black border border-transparent hover:border-black hover:cursor-pointer px-6 py-4 text-base font-medium rounded-lg transition-colors duration-300 
+              className="bg-blueSurf text-white border border-transparent hover:bg-blueSurf-700 hover:cursor-pointer px-6 py-4 text-base font-medium rounded-lg hover:scale-105 shadow-lg hover:shadow-xl 
 "
             >
-              DEVIS GRATUIT
+              DEMANDER UN DEVIS GRATUIT
             </button>
 
             <button className="flex items-center justify-center border-2 border-gray-300 hover:border-gray-400 hover:cursor-pointer rounded-full w-14 h-14 p-0">

@@ -1,7 +1,7 @@
 import { assets } from "../../../assets/assets";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-
+import { ArrowRight } from "lucide-react";
 export default function Navbar() {
   const [isScroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef<HTMLUListElement>(null);
@@ -48,7 +48,7 @@ export default function Navbar() {
           />
         </a>
         <ul
-          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
+          className={`hidden lg:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
             isScroll ? "" : "bg-white shadow-sm bg-opacity-50"
           } `}
         >
@@ -58,8 +58,8 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#about" className="font-roboto">
-              A propos
+            <a href="#projects" className="font-roboto">
+              Mes réalisations
             </a>
           </li>
           <li>
@@ -68,8 +68,8 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#projects" className="font-roboto">
-              Mes projets
+            <a href="#about" className="font-roboto">
+              À propos
             </a>
           </li>
         </ul>
@@ -85,13 +85,12 @@ export default function Navbar() {
 
           <a
             href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-roboto"
+            className="hidden lg:flex items-center text-white gap-3 px-5 py-2.5 bg-blueSurf hover:bg-blueSurf-700 rounded-lg ml-4 text-base font-medium hover:scale-105 shadow-lg hover:shadow-xl"
           >
-            Devis gratuit{" "}
-            <Image src={assets.arrow_icon} alt="arrow" className="w-3" />
+            DEVIS GRATUIT <ArrowRight className="w-5 h-5" />
           </a>
 
-          <button className="block md:hidden ml-3" onClick={openMenu}>
+          <button className="block lg:hidden ml-3" onClick={openMenu}>
             <Image src={assets.menu_black} alt="Menu burger" className="w-6" />
           </button>
         </div>
