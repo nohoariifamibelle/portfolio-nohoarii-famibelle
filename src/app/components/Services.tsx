@@ -219,9 +219,9 @@ export default function Services() {
               </h3>
               <p className="text-slate-300 text-lg leading-relaxed mb-8">
                 Parce que votre site web n&apos;est pas qu&apos;une vitrine,
-                c&pos;est un investissement stratégique. Je m&apos;engage à
-                créer des solutions qui génèrent un retour sur investissement
-                mesurable.
+                c&apos;est un investissement stratégique. <br /> Je
+                m&apos;engage à créer des solutions qui génèrent un retour sur
+                investissement mesurable.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-6 mb-8">

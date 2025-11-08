@@ -24,10 +24,10 @@ export default function About() {
             <Zap className="w-6 h-6" />
             Votre partenaire digital
           </div>
-          <h1 className="text-5xl font-bold text-slate-900 mb-6">
+          <h2 className="text-5xl font-bold text-slate-900 mb-6">
             Un site web qui génère{" "}
             <span className="text-blueSurf">des résultats</span>
-          </h1>
+          </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             J&apos;aide les PME à transformer leur présence en ligne en
             véritable outil de croissance. Sites vitrines et e-commerce
