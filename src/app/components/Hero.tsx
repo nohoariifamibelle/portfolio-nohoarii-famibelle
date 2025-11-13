@@ -1,4 +1,4 @@
-import { MapPin, Mail, Map } from "lucide-react";
+import { MapPin, Mail } from "lucide-react";
 import Image from "next/image";
 import { assets } from "../../../assets/assets";
 
@@ -37,9 +37,13 @@ export default function Hero() {
               DEMANDER UN DEVIS GRATUIT
             </button>
 
-            <button className="flex items-center justify-center border-2 border-gray-300 hover:border-gray-400 hover:cursor-pointer rounded-full w-14 h-14 p-0">
+            <a
+              className="flex items-center justify-center border-2 border-gray-300 hover:border-gray-400 hover:cursor-pointer rounded-full w-14 h-14 p-0"
+              href="mailto:famibellenohoarii@gmail.com"
+              aria-label="Envoyer un email"
+            >
               <Mail className="w-5 h-5 " />
-            </button>
+            </a>
           </div>
         </div>
 

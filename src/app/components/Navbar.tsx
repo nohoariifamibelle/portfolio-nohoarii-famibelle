@@ -1,3 +1,4 @@
+"use client";
 import { assets } from "../../../assets/assets";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -70,6 +71,11 @@ export default function Navbar() {
           <li>
             <a href="#about" className="font-roboto">
               À propos
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="font-roboto">
+              Contact
             </a>
           </li>
         </ul>
