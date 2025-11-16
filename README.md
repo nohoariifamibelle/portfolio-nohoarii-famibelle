@@ -23,7 +23,7 @@ Un portfolio professionnel moderne développé avec Next.js 15, React 19 et Tail
 1. Clonez le dépôt :
 
 ```bash
-git clone https://github.com/votre-username/portfolio-nohoarii-famibelle.git
+git clone https://github.com/nohoariifamibelle/portfolio-nohoarii-famibelle.git
 cd portfolio-nohoarii-famibelle
 ```
 
@@ -60,7 +60,7 @@ src/
 
 Le projet est optimisé pour le déploiement sur Vercel :
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/votre-username/portfolio-nohoarii-famibelle)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nohoariifamibelle/portfolio-nohoarii-famibelle)
 
 ## 📝 Scripts Disponibles
 
@@ -77,6 +77,6 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 **Nohoarii FAMIBELLE**
 
-- Portfolio: [votre-portfolio.com](https://votre-portfolio.com)
-- LinkedIn: [votre-linkedin](https://linkedin.com/in/votre-profil)
-- Email: votre.email@example.com
+- Portfolio: https://nohoarii-famibelle.vercel.app/
+- LinkedIn: https://www.linkedin.com/in/nohoarii-famibelle-06292a262/
+- Email: famibellenohoarii@gmail.com
