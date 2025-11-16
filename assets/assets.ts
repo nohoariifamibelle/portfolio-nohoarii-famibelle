@@ -56,9 +56,11 @@ import figma_icon from "./figma-icon.svg";
 import github_icon from "./github-icon.svg";
 import git_icon from "./git-icon.svg";
 import vscode_icon from "./vscode-icon.svg";
+import fbb_bg from "./bg-fbb.png";
 
 // ------------------ Objet assets ------------------
 export const assets = {
+  fbb_bg,
   user_image,
   code_icon,
   code_icon_dark,

@@ -22,7 +22,20 @@
   --color-blueSurf-800: #04445b;
   --color-blueSurf-900: #033447;
 
+  /* Palette de nuances pour color-bg-black (#08090a) */
+  --color-bg-black-50: #e8e9e9;
+  --color-bg-black-100: #c6c7c8;
+  --color-bg-black-200: #a0a2a3;
+  --color-bg-black-300: #7a7c7e;
+  --color-bg-black-400: #5d5f61;
+  --color-bg-black-500: #404244;
+  --color-bg-black-600: #3a3c3e;
+  --color-bg-black-700: #323335;
+  --color-bg-black-800: #2a2b2d;
+  --color-bg-black-900: #08090a;
+
   --shadow-black: 4px 4px 0 #000;
+
   --shadow-white: 4px 4px 0 #fff;
 
   --font-family-outfit: var(--font-outfit), sans-serif;

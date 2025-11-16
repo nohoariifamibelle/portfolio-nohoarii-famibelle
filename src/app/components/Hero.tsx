@@ -24,9 +24,7 @@ export default function Hero() {
           <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
             Développeur Web Fullstack spécialisé en Next.js, j&apos;accompagne
             les PME dans la création de sites performants, modernes et orientés
-            résultats. <br /> Chaque projet est guidé par l&apos;analyse, le
-            design et la performance pour transformer votre présence en ligne en
-            véritable levier de croissance.
+            résultats.
           </p>
 
           <div className="flex items-center gap-4">
