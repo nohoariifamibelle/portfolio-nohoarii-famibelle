@@ -174,19 +174,20 @@ export default function Hero() {
             </p>
 
             <div className="flex items-center gap-4">
-              <button
+              <a
+                href="#contact"
                 className="bg-blueSurf text-white border border-transparent hover:bg-blueSurf-700 hover:cursor-pointer px-6 py-4 text-base font-medium rounded-lg hover:scale-105 shadow-lg hover:shadow-xl 
 "
               >
-                DEMANDER UN DEVIS GRATUIT
-              </button>
+                OBTENIR UN DEVIS GRATUIT
+              </a>
 
               <a
-                className="flex items-center justify-center border-2 border-gray-300 hover:border-gray-400 hover:cursor-pointer rounded-full w-14 h-14 p-0"
-                href="mailto:famibellenohoarii@gmail.com"
-                aria-label="Envoyer un email"
+                href="#projects"
+                className="border-gray-300 hover:border-gray-400 hover:bg-gray-100 text-gray-600 border hover:cursor-pointer px-6 py-4 text-base font-medium rounded-lg hover:scale-105 shadow-lg hover:shadow-xl 
+"
               >
-                <Mail className="w-5 h-5 " />
+                VOIR MES RÉALISATIONS
               </a>
             </div>
           </div>
@@ -225,7 +226,7 @@ export default function Hero() {
         <div className="relative">
           {/* Gradient overlays for fade effect */}
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+          <div className="  absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
           {/* Embla carousel */}
           <div className="overflow-hidden" ref={emblaRef}>

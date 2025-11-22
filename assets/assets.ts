@@ -5,63 +5,61 @@ declare module "*.png";
 import { StaticImageData } from "next/image";
 
 // ------------------ Imports des images ------------------
-import user_image from "./user-image.png";
-import code_icon from "./code-icon.png";
-import code_icon_dark from "./code-icon-dark.png";
-import edu_icon from "./edu-icon.png";
-import edu_icon_dark from "./edu-icon-dark.png";
-import project_icon from "./project-icon.png";
-import project_icon_dark from "./project-icon-dark.png";
-import vscode from "./vscode.png";
-import firebase from "./firebase.png";
-import figma from "./figma.png";
-import git from "./git.png";
-import mongodb from "./mongodb.png";
-import right_arrow_white from "./right-arrow-white.png";
-import logo from "./logotype_NF_blue_wave.svg";
-import mail_icon from "./mail_icon.png";
-import mail_icon_dark from "./mail_icon_dark.png";
-import hero_img from "./hero-img.png";
-import download_icon from "./download-icon.png";
-import hand_icon from "./hand-icon.png";
-import header_bg_color from "./header-bg-color.png";
-import moon_icon from "./moon_icon.png";
-import sun_icon from "./sun_icon.png";
-import arrow_icon from "./arrow-icon.png";
-import arrow_icon_dark from "./arrow-icon-dark.png";
-import menu_black from "./menu-black.png";
-import menu_white from "./menu-white.png";
-import close_black from "./close-black.png";
-import close_white from "./close-white.png";
-import web_icon from "./web-icon.png";
-import mobile_icon from "./mobile-icon.png";
-import ui_icon from "./ui-icon.png";
-import graphics_icon from "./graphics-icon.png";
-import right_arrow from "./right-arrow.png";
-import send_icon from "./send-icon.png";
-import right_arrow_bold from "./right-arrow-bold.png";
-import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
-import profile_user from "./profile_user.png";
-import react_icon from "./react-icon.svg";
-import nextjs_icon from "./nextjs-icon.svg";
-import node_icon from "./nodejs-icon.svg";
-import tailwindcss_icon from "./tailwindcss-icon.svg";
-import css3_icon from "./css3-icon.svg";
-import html5_icon from "./html5-icon.svg";
-import javascript_icon from "./javascript-icon.svg";
-import typescript_icon from "./typescript-icon.svg";
-import mongodb_icon from "./mongodb-icon.svg";
-import firebase_icon from "./firebase-icon.svg";
-import figma_icon from "./figma-icon.svg";
-import github_icon from "./github-icon.svg";
-import git_icon from "./git-icon.svg";
-import vscode_icon from "./vscode-icon.svg";
-import fbb_bg from "./bg-fbb.png";
+import code_icon from "./icons/picto/code-icon.png";
+import code_icon_dark from "./icons/picto/code-icon-dark.png";
+import edu_icon from "./icons/picto/edu-icon.png";
+import edu_icon_dark from "./icons/picto/edu-icon-dark.png";
+import project_icon from "./icons/picto/project-icon.png";
+import project_icon_dark from "./icons/picto/project-icon-dark.png";
+import vscode from "./icons/tools/vscode.png";
+import firebase from "./icons/tools/firebase.png";
+import figma from "./icons/tools/figma.png";
+import git from "./icons/tools/git.png";
+import mongodb from "./icons/technos/mongodb.png";
+import right_arrow_white from "./icons/picto/right-arrow-white.png";
+import logo from "./icons/logo/logotype_NF_blue_wave.svg";
+import mail_icon from "./icons/picto/mail_icon.png";
+import mail_icon_dark from "./icons/picto/mail_icon_dark.png";
+import hero_img from "./img/hero-img.png";
+import download_icon from "./icons/picto/download-icon.png";
+import hand_icon from "./icons/picto/hand-icon.png";
+import header_bg_color from "./img/header-bg-color.png";
+import moon_icon from "./icons/picto/moon_icon.png";
+import sun_icon from "./icons/picto/sun_icon.png";
+import arrow_icon from "./icons/picto/arrow-icon.png";
+import arrow_icon_dark from "./icons/picto/arrow-icon-dark.png";
+import menu_black from "./icons/picto/menu-black.png";
+import menu_white from "./icons/picto/menu-white.png";
+import close_black from "./icons/picto/close-black.png";
+import close_white from "./icons/picto/close-white.png";
+import web_icon from "./icons/picto/web-icon.png";
+import mobile_icon from "./icons/picto/mobile-icon.png";
+import ui_icon from "./icons/picto/ui-icon.png";
+import graphics_icon from "./icons/picto/graphics-icon.png";
+import right_arrow from "./icons/picto/right-arrow.png";
+import send_icon from "./icons/picto/send-icon.png";
+import right_arrow_bold from "./icons/picto/right-arrow-bold.png";
+import right_arrow_bold_dark from "./icons/picto/right-arrow-bold-dark.png";
+import profile_user from "./img/profile_user.png";
+import react_icon from "./icons/technos/react-icon.svg";
+import nextjs_icon from "./icons/technos/nextjs-icon.svg";
+import node_icon from "./icons/technos/nodejs-icon.svg";
+import tailwindcss_icon from "./icons/technos/tailwindcss-icon.svg";
+import css3_icon from "./icons/technos/css3-icon.svg";
+import html5_icon from "./icons/technos/html5-icon.svg";
+import javascript_icon from "./icons/technos/javascript-icon.svg";
+import typescript_icon from "./icons/technos/typescript-icon.svg";
+import mongodb_icon from "./icons/technos/mongodb-icon.svg";
+import firebase_icon from "./icons/tools/firebase-icon.svg";
+import figma_icon from "./icons/tools/figma-icon.svg";
+import github_icon from "./icons/tools/github-icon.svg";
+import git_icon from "./icons/tools/git-icon.svg";
+import vscode_icon from "./icons/tools/vscode-icon.svg";
+import fbb_bg from "./projects/bg-fbb.png";
 
 // ------------------ Objet assets ------------------
 export const assets = {
   fbb_bg,
-  user_image,
   code_icon,
   code_icon_dark,
   edu_icon,
@@ -136,25 +134,6 @@ export interface InfoItem {
 }
 
 // ------------------ Données ------------------
-export const workData: WorkItem[] = [
-  {
-    title: "Frontend project",
-    description: "Web Design",
-    bgImage: "/work-1.png",
-  },
-  { title: "Geo based app", description: "Mobile App", bgImage: "/work-2.png" },
-  {
-    title: "Photography site",
-    description: "Web Design",
-    bgImage: "/work-3.png",
-  },
-  {
-    title: "UI/UX designing",
-    description: "UI/UX Design",
-    bgImage: "/work-4.png",
-  },
-];
-
 export const serviceData: ServiceItem[] = [
   {
     icon: assets.web_icon,
