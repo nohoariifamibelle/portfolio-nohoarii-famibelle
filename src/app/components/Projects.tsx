@@ -52,7 +52,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900">
+    <section className="max-w-7xl mx-auto py-24 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto" id="projects">
         {/* Introduction */}
         <div className="text-center space-y-4 mb-16">

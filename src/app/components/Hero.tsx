@@ -148,7 +148,7 @@ export default function Hero() {
     ]
   );
   return (
-    <section className="min-h-screen px-6 py-20">
+    <section className="max-w-7xl mx-auto px-6 py-20">
       {/* Hero Section */}
       <div className="flex items-center justify-center py-20">
         <div className="max-w-7xl w-full mx-auto grid lg:grid-cols-2 gap-12 items-center">

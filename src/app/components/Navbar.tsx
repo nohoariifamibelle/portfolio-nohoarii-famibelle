@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { href: "#projects", label: "Mes réalisations" },
   { href: "#services", label: "Services" },
   { href: "#about", label: "À propos" },
+  { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
 ] as const;
 
@@ -116,7 +117,10 @@ export default function Navbar() {
         >
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
-              <Link href={link.href} className="font-roboto hover:text-blueSurf transition-colors">
+              <Link
+                href={link.href}
+                className="font-roboto hover:text-blueSurf transition-colors"
+              >
                 {link.label}
               </Link>
             </li>
@@ -127,7 +131,9 @@ export default function Navbar() {
           {/* Bouton Dark Mode */}
           <button
             onClick={toggleDarkMode}
-            aria-label={isDarkMode ? "Activer le mode clair" : "Activer le mode sombre"}
+            aria-label={
+              isDarkMode ? "Activer le mode clair" : "Activer le mode sombre"
+            }
             className="hover:scale-110 transition-transform"
           >
             {isDarkMode ? (
