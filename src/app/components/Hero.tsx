@@ -152,42 +152,40 @@ export default function Hero() {
       {/* Hero Section */}
       <div className="flex items-center justify-center py-20">
         <div className="max-w-7xl w-full mx-auto grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 order-2 lg:order-1">
-            <div className="inline-flex items-center gap-2 bg-white text-blueSurf border-blueSurf border px-4 py-2 rounded-full lg:text-lg text-sm font-light mb-6">
+          <div className="space-y-6 order-2 lg:order-1">
+            <div className="inline-flex items-center gap-2 bg-white text-blueSurf border-blueSurf border px-4 py-2 rounded-full lg:text-md text-sm font-light mb-6">
               <MapPin className="w-6 h-6" />
               Basé sur Paris • Disponible à distance
             </div>
 
-            <div className="space-y-4">
-              <h1 className="text-5xl xl:text-6xl font-bold leading-tight">
-                Je transforme vos idées en{" "}
-                <span className="text-blueSurf">
-                  applications web performantes
-                </span>
+            <div className="space-y-3">
+              <h1 className="text-4xl xl:text-5xl font-bold leading-tight">
+                Transformez votre site web en machine à{" "}
+                <span className="text-blueSurf">générer des clients</span>
               </h1>
             </div>
 
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-              Développeur Web Fullstack spécialisé en Next.js, j&apos;accompagne
-              les PME dans la création de sites performants, modernes et
-              orientés résultats.
+              Vous perdez des opportunités chaque jour face à des concurrents
+              mieux positionnés en ligne. Créez enfin un site qui convertit vos
+              visiteurs en demandes de devis qualifiées.
             </p>
 
             <div className="flex items-center gap-4">
               <a
                 href="#contact"
-                className="bg-blueSurf text-white border border-transparent hover:bg-blueSurf-700 hover:cursor-pointer px-6 py-4 text-base font-medium rounded-lg hover:scale-105 shadow-lg hover:shadow-xl 
+                className="bg-blueSurf text-white border border-transparent hover:bg-blueSurf-700 hover:cursor-pointer px-6 py-4 text-base font-medium rounded-lg hover:scale-105 shadow-lg hover:shadow-xl uppercase
 "
               >
-                OBTENIR UN DEVIS GRATUIT
+                Obtenir mon devis gratuit
               </a>
 
               <a
                 href="#projects"
-                className="border-gray-300 hover:border-gray-400 hover:bg-gray-100 text-gray-600 border hover:cursor-pointer px-6 py-4 text-base font-medium rounded-lg hover:scale-105 shadow-lg hover:shadow-xl 
+                className="border-gray-300 hover:border-gray-400 hover:bg-gray-100 text-gray-600 border hover:cursor-pointer px-6 py-4 text-base font-medium rounded-lg hover:scale-105 shadow-lg hover:shadow-xl uppercase
 "
               >
-                VOIR MES RÉALISATIONS
+                Voir mes réalisations
               </a>
             </div>
           </div>

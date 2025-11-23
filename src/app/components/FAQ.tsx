@@ -1,8 +1,7 @@
 import { MessageCircleQuestionMark } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 
 interface FAQItem {
   question: string;
@@ -199,6 +198,24 @@ export default function Faq() {
             />
           ))}
         </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="mt-24 bg-gradient-to-br from-blueSurf-50 to-blueSurf-50 border-2 border-blueSurf-200 rounded-2xl p-12 text-center">
+        <h2 className="text-3xl font-bold text-slate-900 mb-4">
+          Vous avez une vision ? Concrétisons-la ensemble.
+        </h2>
+        <p className="text-lg text-slate-700 mb-8 max-w-2xl mx-auto">
+          Parlons de vos ambitions et bâtissons un site à votre image, capable
+          de séduire et fidéliser votre audience.
+        </p>
+        <a
+          href="#contact"
+          className="inline-flex items-center gap-2 bg-blueSurf-600 hover:bg-blueSurf-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
+        >
+          Démarrer votre projet
+          <span className="text-xl">→</span>
+        </a>
       </div>
     </section>
   );
