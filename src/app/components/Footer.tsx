@@ -33,20 +33,20 @@ export default function Footer() {
             </p>
 
             <div className="space-y-3">
-              <a
+              <Link
                 href="mailto:famibellenohoarii@gmail.com"
                 className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
               >
                 <Mail size={18} className="flex-shrink-0" />
                 <span className="text-sm">famibellenohoarii@gmail.com</span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="tel:+33744415857"
                 className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
               >
                 <Phone size={18} className="flex-shrink-0" />
                 <span className="text-sm">+33 7 44 41 58 57</span>
-              </a>
+              </Link>
               <div className="flex items-center gap-3 text-gray-400">
                 <MapPin size={18} className="flex-shrink-0" />
                 <span className="text-sm">Paris, France</span>
@@ -54,7 +54,7 @@ export default function Footer() {
             </div>
 
             <div className="flex gap-4 mt-6">
-              <a
+              <Link
                 href="https://www.linkedin.com/in/nohoarii-famibelle"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -62,8 +62,8 @@ export default function Footer() {
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://github.com/nohoariifamibelle"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -71,49 +71,49 @@ export default function Footer() {
                 aria-label="GitHub"
               >
                 <Github size={20} />
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="lg:col-span-2">
             <h4 className="text-white font-semibold mb-4">Navigation</h4>
             <nav className="space-y-3">
-              <a
+              <Link
                 href="/"
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
                 Accueil
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#project"
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
                 Mes réalisations
-              </a>
-              <a
-                href="/services"
+              </Link>
+              <Link
+                href="#services"
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
                 Services
-              </a>
-              <a
-                href="/a-propos"
+              </Link>
+              <Link
+                href="#about"
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
                 À propos
-              </a>
-              <a
-                href="/faq"
+              </Link>
+              <Link
+                href="#faq"
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
                 FAQ
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link
+                href="#contact"
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
                 Contact
-              </a>
+              </Link>
             </nav>
           </div>
 
@@ -203,7 +203,7 @@ export default function Footer() {
                 </p>
               </div>
               <Link
-                href="/contact"
+                href="#contact"
                 className="bg-white text-blue-600 px-8 py-3.5 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2 whitespace-nowrap shadow-lg"
               >
                 Démarrer mon projet
@@ -224,12 +224,12 @@ export default function Footer() {
               >
                 Mentions légales
               </Link>
-              <a
+              <Link
                 href="/politique-confidentialite"
                 className="hover:text-white transition-colors"
               >
                 Politique de confidentialité
-              </a>
+              </Link>
             </div>
           </div>
         </div>
