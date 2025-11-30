@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar />
       <main className="cursor-default">
         <Hero />
-        <Advantage />
+        {/* <Advantage /> */}
         <Projects />
         <Services />
         <About />
