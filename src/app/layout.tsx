@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Roboto } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -30,6 +32,8 @@ export default function RootLayout({
     <html lang="fr" className="scroll-smooth">
       <body className={`${outfit.variable} ${roboto.variable} antialiased`}>
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
