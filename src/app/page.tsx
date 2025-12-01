@@ -6,7 +6,7 @@ import Services from "./components/Services";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Faq from "./components/FAQ";
-import Advantage from "./components/Advantage";
+//import Advantage from "./components/Advantage";
 import Footer from "./components/Footer";
 
 export default function Home() {

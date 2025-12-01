@@ -1,4 +1,4 @@
-import { MapPin, Mail, Zap } from "lucide-react";
+import { MapPin } from "lucide-react";
 import Image from "next/image";
 import { assets } from "../../../assets/assets";
 import { useState } from "react";
