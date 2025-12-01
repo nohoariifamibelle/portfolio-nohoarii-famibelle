@@ -1,11 +1,59 @@
-import {
-  HandHelping,
-  Lightbulb,
-  CheckCircle2,
-  Rocket,
-  BarChart3,
-  ArrowRight,
-} from "lucide-react";
+import { HandHelping } from "lucide-react";
+
+interface CardProps {
+  title: string;
+  description: string;
+  colorScheme: "lightBlue" | "darkBlue" | "white";
+  visual: React.ReactNode;
+  className?: string;
+}
+
+const Card: React.FC<CardProps> = ({
+  title,
+  description,
+  colorScheme,
+  visual,
+  className = "",
+}) => {
+  const baseClasses =
+    "rounded-3xl transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col justify-between";
+
+  const colorClasses = {
+    lightBlue: "bg-blueSurf-50 border-2 border-blueSurf-200",
+    darkBlue:
+      "bg-blueSurf text-white hover:shadow-2xl hover:shadow-blue-500/20",
+    white: "bg-white shadow-md",
+  };
+
+  const textColorClasses = {
+    lightBlue: "text-gray-800",
+    darkBlue: "text-white",
+    white: "text-gray-800",
+  };
+
+  const titleSizeClasses =
+    colorScheme === "darkBlue"
+      ? "text-3xl md:text-4xl font-bold mb-6"
+      : "text-2xl md:text-3xl font-bold mb-4";
+
+  const descriptionClasses =
+    colorScheme === "darkBlue"
+      ? "text-base md:text-lg leading-relaxed opacity-90"
+      : "text-base md:text-lg leading-relaxed text-gray-700";
+
+  return (
+    <div className={`${baseClasses} ${colorClasses[colorScheme]} ${className}`}>
+      <div>
+        <h3 className={`${titleSizeClasses} ${textColorClasses[colorScheme]}`}>
+          {title}
+        </h3>
+        <p className={descriptionClasses}>{description}</p>
+      </div>
+
+      <div className="mt-6 flex justify-center md:justify-end">{visual}</div>
+    </div>
+  );
+};
 
 export default function Advantage() {
   return (
@@ -25,6 +73,131 @@ export default function Advantage() {
           La plupart des PME perdent 60% de leurs opportunités à cause d&apos;un
           site qui ne convertit pas. Voici comment je corrige ça.
         </p>
+      </div>
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-6 auto-rows-fr lg:auto-rows-auto">
+          {/* CARTE 1 - Des résultats qui comptent */}
+          <Card
+            title="Des résultats qui comptent"
+            description="Chaque fonctionnalité est pensée pour transformer vos visiteurs en clients."
+            colorScheme="lightBlue"
+            className="lg:col-span-3 lg:row-span-1 p-4 md:p-8 min-h-[200px]"
+            visual={
+              <div className="w-full">
+                <div className="flex gap-2 items-end justify-center mb-4">
+                  <div className="w-8 h-12 bg-[#077ea2] rounded-t-lg"></div>
+                  <div className="w-8 h-16 bg-[#077ea2] rounded-t-lg"></div>
+                  <div className="w-8 h-20 bg-[#077ea2] rounded-t-lg"></div>
+                  <div className="w-8 h-24 bg-[#077ea2] rounded-t-lg"></div>
+                </div>
+                <div className="flex gap-3 justify-center text-2xl">
+                  <span role="img" aria-label="money">
+                    💰
+                  </span>
+                  <span role="img" aria-label="chart">
+                    📊
+                  </span>
+                  <span role="img" aria-label="trending">
+                    📈
+                  </span>
+                </div>
+              </div>
+            }
+          />
+
+          {/* CARTE 2 - Rapide et efficace ⭐ CARTE PRINCIPALE */}
+          <Card
+            title="Rapide et efficace"
+            description="Votre site web professionnel livré en quelques semaines, sans compromis sur la qualité ni la performance."
+            colorScheme="darkBlue"
+            className="lg:col-span-5 lg:row-span-1 p-8 md:p-10 min-h-[200px]"
+            visual={
+              <div className="flex flex-col items-center justify-center my-8">
+                <div
+                  className="text-6xl md:text-6xl mb-2"
+                  role="img"
+                  aria-label="rocket"
+                >
+                  🚀
+                </div>
+              </div>
+            }
+          />
+
+          {/* CARTE 3 - Performance garantie */}
+          <Card
+            title="Performance garantie"
+            description="Un site ultra-rapide, optimisé pour Google et conçu pour offrir une expérience utilisateur exceptionnelle qui fidélise vos visiteurs."
+            colorScheme="white"
+            className="lg:col-span-4 lg:row-span-1 p-6 md:p-8 min-h-[200px] border-2 border-gray-200"
+            visual={
+              <div className="relative inline-block">
+                <div
+                  className="text-6xl md:text-7xl"
+                  role="img"
+                  aria-label="lightning"
+                >
+                  ⚡
+                </div>
+                <div className="absolute -top-2 -right-2 bg-yellow-400 text-gray-900 text-xs md:text-sm font-bold px-3 py-1 rounded-full shadow-lg">
+                  100%
+                </div>
+              </div>
+            }
+          />
+
+          {/* CARTE 4 - Votre partenaire de A à Z */}
+          <Card
+            title="Votre partenaire de A à Z"
+            description="De la stratégie initiale à l'optimisation continue, je gère l'intégralité de votre projet pour que vous puissiez vous concentrer sur votre business."
+            colorScheme="white"
+            className="lg:col-span-7 lg:row-span-1 p-8 md:p-6 min-h-[200px] border-2 border-gray-200"
+            visual={
+              <div className="flex items-center justify-center gap-2 w-full flex-wrap">
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold shadow-md">
+                  ✓
+                </div>
+                <div className="h-1 w-8 md:w-12 bg-green-500 rounded"></div>
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold shadow-md">
+                  ✓
+                </div>
+                <div className="h-1 w-8 md:w-12 bg-green-500 rounded"></div>
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold shadow-md">
+                  ✓
+                </div>
+              </div>
+            }
+          />
+
+          {/* CARTE 5 - L'expertise PME qui fait la différence */}
+          <Card
+            title="L'expertise PME qui fait la différence"
+            description="Plus de 20 projets avec des entrepreneurs comme vous : je comprends vos enjeux et je parle votre langage business, pas juste du code."
+            colorScheme="lightBlue"
+            className="lg:col-span-5 lg:row-span-1 p-6 md:p-8 min-h-[200px]"
+            visual={
+              <div className="flex flex-col items-center gap-2">
+                <div className="inline-flex items-center bg-blueSurf text-white px-6 py-3 rounded-full shadow-lg">
+                  <span className="text-2xl" role="img" aria-label="trophy">
+                    🏆
+                  </span>
+                  <span className="font-bold text-lg">Expert PME</span>
+                </div>
+                <div className="flex gap-4 text-3xl">
+                  <span role="img" aria-label="store">
+                    🏪
+                  </span>
+                  <span role="img" aria-label="briefcase">
+                    💼
+                  </span>
+                  <span role="img" aria-label="factory">
+                    🏭
+                  </span>
+                </div>
+              </div>
+            }
+          />
+        </div>
       </div>
     </section>
   );
