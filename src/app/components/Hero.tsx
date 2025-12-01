@@ -94,7 +94,8 @@ const CompanyCard = ({ company }: { company: Company }) => {
         className="relative h-32 rounded-[10px] backdrop-blur-glass bg-glass-bg border border-glass-border shadow-glass
                    flex items-center justify-center p-6 group overflow-hidden"
         whileHover={{
-          boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.15), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+          boxShadow:
+            "0 20px 25px -5px rgb(0 0 0 / 0.15), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
           borderColor: "rgba(59, 130, 246, 0.3)",
         }}
         transition={{ duration: 0.3 }}
@@ -177,7 +178,7 @@ export default function Hero() {
     ]
   );
   return (
-    <section className="max-w-7xl mx-auto px-6 py-20">
+    <section className="max-w-7xl mx-auto px-6 py-10">
       {/* Hero Section */}
       <div className="flex items-center justify-center py-20">
         <div className="max-w-7xl w-full mx-auto grid lg:grid-cols-2 gap-12 items-center">
@@ -227,7 +228,8 @@ export default function Hero() {
                 whileHover={{
                   scale: 1.05,
                   backgroundColor: "#0c4a6e",
-                  boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.2), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+                  boxShadow:
+                    "0 20px 25px -5px rgb(0 0 0 / 0.2), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
                 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -242,7 +244,8 @@ export default function Hero() {
                   scale: 1.05,
                   borderColor: "#9ca3af",
                   backgroundColor: "#f3f4f6",
-                  boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+                  boxShadow:
+                    "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
                 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
