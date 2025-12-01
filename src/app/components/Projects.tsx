@@ -16,9 +16,9 @@ export default function Projects() {
   const projects: Project[] = [
     {
       id: "1",
-      title: "Fondation Brigitte Bardot",
+      title: "Site vitrine pour une entreprise de transport",
       description:
-        "J'ai conçu un site web sur mesure pour la Fondation Brigitte Bardot, reflétant son engagement pour la protection animale. Ce projet a renforcé la visibilité de la fondation tout en sensibilisant un large public à ses actions et valeurs.",
+        "Site vitrine pour une entreprise de transport, de personnes et de marchandises",
       image: assets.fbb_bg,
       features: [
         "Formulaire de contact",

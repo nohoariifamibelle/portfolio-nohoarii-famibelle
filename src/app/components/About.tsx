@@ -159,7 +159,9 @@ export default function About() {
           <h3 className="text-xl font-bold text-slate-900 mb-3">
             Formation solide
           </h3>
-          <p className="text-slate-600 mb-4">Bachelor Développement Web</p>
+          <p className="text-slate-600 mb-4">
+            Mastère Tech Lead | Cybersécurité et Intelligence Artificielle
+          </p>
           <p className="text-sm text-slate-500">
             Expertise technique validée pour garantir la qualité de vos projets.
           </p>
