@@ -76,7 +76,7 @@ export default function Contact() {
   };
   if (!mounted) return null;
   return (
-    <section className="max-w-7xl mx-auto px-6 py-24">
+    <section className="max-w-7xl mx-auto px-6 py-24" id="contact">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-white text-blueSurf border-blueSurf border px-4 py-2 rounded-full lg:text-lg text-sm font-light mb-6">
@@ -164,24 +164,8 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-
-            {/* <div className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-3xl p-8 border-2 border-blue-100">
-              <p className="text-sm font-semibold text-slate-600 mb-2">
-                20+ projets réalisés
-              </p>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                Des résultats concrets
-              </h3>
-              <p className="text-slate-700">
-                Des clients satisfaits qui ont vu leurs projets web devenir des
-                outils de croissance réelle. Pourquoi pas le vôtre ?
-              </p>
-            </div> */}
           </div>
-          <div
-            className="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-slate-100"
-            id="contact"
-          >
+          <div className="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-slate-100">
             <form className="space-y-6" onSubmit={handleSubmit} noValidate>
               <div>
                 <label

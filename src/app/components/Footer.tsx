@@ -181,7 +181,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-lg font-medium transition-colors text-sm flex items-center justify-center gap-2"
+                className="w-full bg-white text-slate-900 hover:shadow-xl hover:scale-105 px-4 py-2.5 rounded-lg font-medium transition-colors text-sm flex items-center justify-center gap-2"
               >
                 S&apos;inscrire
                 <ArrowRight size={16} />
@@ -191,7 +191,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-800 pt-8">
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 mb-8 shadow-xl">
+          <div className="bg-gradient-to-r from-blueSurf-500 to-blueSurf-600 rounded-2xl p-8 mb-8 shadow-xl">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
                 <h3 className="text-white text-2xl font-bold mb-2">
@@ -204,7 +204,7 @@ export default function Footer() {
               </div>
               <Link
                 href="#contact"
-                className="bg-white text-blue-600 px-8 py-3.5 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2 whitespace-nowrap shadow-lg"
+                className="bg-white text-slate-900 px-8 py-3.5 rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-colors flex items-center gap-2 whitespace-nowrap shadow-lg cursor-pointer"
               >
                 Démarrer mon projet
                 <ArrowRight size={20} />

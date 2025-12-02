@@ -38,7 +38,7 @@ const Card: React.FC<CardProps> = ({
 
   const descriptionClasses =
     colorScheme === "darkBlue"
-      ? "text-base md:text-lg leading-relaxed opacity-90"
+      ? "text-base md:text-lg leading-relaxed"
       : "text-base md:text-lg leading-relaxed text-gray-700";
 
   return (
