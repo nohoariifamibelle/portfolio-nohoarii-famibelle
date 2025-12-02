@@ -57,7 +57,7 @@ const Card: React.FC<CardProps> = ({
 
 export default function Advantage() {
   return (
-    <section id="services" className="max-w-7xl mx-auto px-6 bg-white py-24">
+    <section id="advantages" className="max-w-7xl mx-auto px-6 bg-white py-24">
       {/* Section Header */}
       <div className="text-center mb-20">
         <div className="inline-flex items-center gap-2 bg-white text-blueSurf border-blueSurf border px-4 py-2 rounded-full lg:text-lg text-sm font-light mb-6">
