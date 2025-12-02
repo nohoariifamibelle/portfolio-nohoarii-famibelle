@@ -85,31 +85,31 @@ export default function Footer() {
                 Accueil
               </Link>
               <Link
-                href="#project"
+                href="/#project"
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
                 Mes réalisations
               </Link>
               <Link
-                href="#services"
+                href="/#services"
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
                 Services
               </Link>
               <Link
-                href="#about"
+                href="/#about"
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
                 À propos
               </Link>
               <Link
-                href="#faq"
+                href="/#faq"
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
                 FAQ
               </Link>
               <Link
-                href="#contact"
+                href="/#contact"
                 className="block text-gray-400 hover:text-white transition-colors text-sm"
               >
                 Contact
@@ -165,7 +165,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="lg:col-span-3">
+          {/* <div className="lg:col-span-3">
             <h4 className="text-white font-semibold mb-4">Restez informé</h4>
             <p className="text-gray-400 text-sm mb-4">
               Recevez des conseils exclusifs, astuces CRO et ressources pour
@@ -187,7 +187,7 @@ export default function Footer() {
                 <ArrowRight size={16} />
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
 
         <div className="border-t border-slate-800 pt-8">
@@ -203,7 +203,7 @@ export default function Footer() {
                 </p>
               </div>
               <Link
-                href="#contact"
+                href="/#contact"
                 className="bg-white text-slate-900 px-8 py-3.5 rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-colors flex items-center gap-2 whitespace-nowrap shadow-lg cursor-pointer"
               >
                 Démarrer mon projet

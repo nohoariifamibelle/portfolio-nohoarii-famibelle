@@ -8,12 +8,12 @@ import { ArrowRight, MoonIcon, SunIcon } from "lucide-react";
 
 // Liens de navigation centralisés pour éviter la duplication
 const NAV_LINKS = [
-  { href: "#top", label: "Accueil" },
-  { href: "#projects", label: "Mes réalisations" },
-  { href: "#services", label: "Services" },
-  { href: "#about", label: "À propos" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#top", label: "Accueil" },
+  { href: "/#projects", label: "Mes réalisations" },
+  { href: "/#services", label: "Services" },
+  { href: "/#about", label: "À propos" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/#contact", label: "Contact" },
 ] as const;
 
 export default function Navbar() {
@@ -99,7 +99,7 @@ export default function Navbar() {
           isScroll ? "bg-white/60 bg-opacity-50 backdrop-blur-lg shadow-sm" : ""
         }`}
       >
-        <Link href="#top" aria-label="Retour à l'accueil">
+        <Link href="/#top" aria-label="Retour à l'accueil">
           <Image
             src={assets.logo}
             alt="Logo"
@@ -145,7 +145,7 @@ export default function Navbar() {
 
           {/* CTA Desktop */}
           <Link
-            href="#contact"
+            href="/#contact"
             className="hidden lg:flex items-center text-white gap-3 px-5 py-2.5 bg-blueSurf hover:bg-blueSurf-700 rounded-lg ml-4 text-base font-medium hover:scale-105 shadow-lg hover:shadow-xl transition-all"
           >
             DEVIS GRATUIT <ArrowRight className="w-5 h-5" />
@@ -212,7 +212,7 @@ export default function Navbar() {
           {/* CTA Mobile */}
           <li className="mt-8">
             <Link
-              href="#contact"
+              href="/#contact"
               className="flex items-center justify-between w-full px-5 py-2.5 border border-gray-500 rounded-full font-roboto bg-white hover:bg-gray-100 transition-colors"
               onClick={closeMenu}
             >
