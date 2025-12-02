@@ -9,6 +9,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { assets } from "../../../assets/assets";
 export default function About() {
   return (
@@ -114,13 +115,19 @@ export default function About() {
 
           {/* CTA Button */}
           <div className="flex flex-wrap gap-4">
-            <button className="cursor-pointer bg-blueSurf hover:bg-blueSurf-700 text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-2 transition-all shadow-lg shadow-blueSurf-200 hover:shadow-xl hover:shadow-blueSurf-300">
+            <Link
+              href="/#contact"
+              className="cursor-pointer bg-blueSurf hover:bg-blueSurf-700 text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-2 transition-all shadow-lg shadow-blueSurf-200 hover:shadow-xl hover:shadow-blueSurf-300"
+            >
               Discutons de votre projet
               <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="cursor-pointer bg-white hover:bg-slate-50 text-slate-700 px-8 py-4 rounded-lg font-semibold border-2 border-slate-200 transition-all">
+            </Link>
+            <Link
+              href="/#projects"
+              className="cursor-pointer bg-white hover:bg-slate-50 text-slate-700 px-8 py-4 rounded-lg font-semibold border-2 border-slate-200 transition-all"
+            >
               Voir mes réalisations
-            </button>
+            </Link>
           </div>
         </div>
       </div>
