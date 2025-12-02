@@ -18,7 +18,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title:
-    "Développeur Web Freelance Paris | Sites Vitrines, E-commerce & Apps sur-mesure",
+    "Développeur Fullstack Freelance Paris • Sites Vitrines, E-commerce & Apps sur-mesure",
   description:
     "Je crée des sites web modernes et sur-mesure pour PME à Paris : vitrines, e-commerce et applications web optimisées SEO. Boostez votre visibilité dès maintenant !",
 };
