@@ -15,14 +15,6 @@ export default function MentionsLegales() {
       <Navbar />
       <main className="min-h-screen bg-white py-24">
         <div className="max-w-4xl mx-auto px-6 py-16">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-blueSurf-600 hover:text-blueSurf-700 mb-8 transition-colors"
-          >
-            <ArrowLeft size={20} />
-            Retour à l&apos;accueil
-          </Link>
-
           <h1 className="text-4xl font-bold text-slate-900 mb-8">
             Mentions Légales
           </h1>
