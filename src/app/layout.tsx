@@ -100,6 +100,12 @@ export const metadata: Metadata = {
     },
   },
 
+  // Favicon et icônes (fichiers détectés automatiquement dans src/app/)
+  // favicon.ico, apple-touch-icon.png, icon.svg sont servis automatiquement par Next.js
+
+  // Web App Manifest pour PWA
+  manifest: "/site.webmanifest",
+
   // Vérification Google Search Console (à ajouter plus tard)
   // verification: {
   //   google: 'votre-code-de-verification-google',

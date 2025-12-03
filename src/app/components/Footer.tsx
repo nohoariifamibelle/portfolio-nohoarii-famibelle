@@ -12,12 +12,13 @@ import {
 import Link from "next/link";
 
 export default function Footer() {
+  /*
   const handleNewsletterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const email = formData.get("email");
     console.log("Newsletter signup:", email);
-  };
+  };*/
 
   return (
     <footer className="bg-slate-900 text-gray-300">
