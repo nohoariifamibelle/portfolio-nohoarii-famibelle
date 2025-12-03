@@ -19,32 +19,24 @@ export default function MentionsLegales() {
 
           <div className="prose prose-slate max-w-none space-y-8">
             <section>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Conformément aux dispositions de la loi n° 2004-575 du 21 juin
+                2004 pour la confiance en l&apos;économie numérique, il est
+                précisé aux utilisateurs du site Nohoarii l&apos;identité des
+                différents intervenants dans le cadre de sa réalisation et de
+                son suivi.
+              </p>
               <h2 className="text-2xl font-bold text-slate-900 mb-4">
                 1. Éditeur du site
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                Le site est édité par :
+                Le présent site, accessible à l’URL https://nohoarii.dev/ (le «
+                Site »), est édité par :
               </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li>
-                  <strong>Nom :</strong> Nohoarii Famibelle
-                </li>
-                <li>
-                  <strong>Statut :</strong> Auto-entrepreneur / Micro-entreprise
-                </li>
-                <li>
-                  <strong>SIRET :</strong>
-                </li>
-                <li>
-                  <strong>Adresse :</strong> Nation, Paris
-                </li>
-                <li>
-                  <strong>Email :</strong> famibellenohoarii@gmail.com
-                </li>
-                <li>
-                  <strong>Téléphone :</strong> +33 7 44 41 58 57
-                </li>
-              </ul>
+              <p className="text-gray-700 leading-relaxed">
+                Nohoarii FAMIBELLE, résidant 19 Avenue du Bel-Air, 75012, Paris,
+                de nationalité Française (France), né(e) le 15/02/2000
+              </p>
             </section>
 
             <section>
@@ -52,68 +44,46 @@ export default function MentionsLegales() {
                 2. Hébergement
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                Le site est hébergé par :
-              </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li>
-                  <strong>Nom :</strong> Vercel Inc.
-                </li>
-                <li>
-                  <strong>Adresse :</strong> 340, South Lemon Avenue à Walnut,
-                  Californie, USA
-                </li>
-                <li>
-                  <strong>Site web :</strong> https://vercel.com/
-                </li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">
-                3. Propriété intellectuelle
-              </h2>
-              <p className="text-gray-700 leading-relaxed">
-                L&apos;ensemble du contenu de ce site (textes, images, vidéos,
-                logos, etc.) est la propriété exclusive de Nohoarii Famibelle,
-                sauf mention contraire. Toute reproduction, distribution,
-                modification, adaptation, retransmission ou publication de ces
-                différents éléments est strictement interdite sans l&apos;accord
-                écrit préalable de Nohoarii Famibelle.
+                Le Site est hébergé par la société Vercel, situé 340, South
+                Lemon Avenue à Walnut, Californie, USA, (contact téléphonique ou
+                email : +19513836898).
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-slate-900 mb-4">
-                4. Responsabilité
+                3. Directeur de publication
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                Les informations contenues sur ce site sont aussi précises que
-                possible et le site est périodiquement remis à jour. Toutefois,
-                Nohoarii Famibelle ne peut garantir l&apos;exactitude, la
-                complétude ou l&apos;actualité des informations diffusées sur
-                son site.
+                Le Directeur de la publication du Site est Nohoarii FAMIBELLE.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-slate-900 mb-4">
-                5. Liens hypertextes
+                4. Nous contacter
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                Le site peut contenir des liens hypertextes vers d&apos;autres
-                sites. Nohoarii Famibelle n&apos;exerce aucun contrôle sur ces
-                sites et décline toute responsabilité quant à leur contenu.
+                Par téléphone : +33744415857
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Par email : famibellenohoarii@gmail.com
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Par courrier : 19 Avenue du Bel-Air, 75012, Paris
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-slate-900 mb-4">
-                6. Droit applicable
+                5. Données personnelles
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                Le présent site et les mentions légales sont soumis au droit
-                français. En cas de litige, les tribunaux français seront seuls
-                compétents.
+                Le traitement de vos données à caractère personnel est régi par
+                notre Charte du respect de la vie privée, disponible depuis la
+                section &quot;Charte de Protection des Données
+                Personnelles&quot;, conformément au Règlement Général sur la
+                Protection des Données 2016/679 du 27 avril 2016 («RGPD»).
               </p>
             </section>
           </div>
