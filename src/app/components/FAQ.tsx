@@ -112,10 +112,22 @@ const FAQAccordion = ({
 }) => {
   return (
     <div className="space-y-3">
-      <h3 className="text-lg font-semibold text-primary mb-4 flex items-center gap-2">
-        <span className="h-1 w-8 bg-blueSurf"></span>
+      <motion.h3
+        className="text-lg font-semibold text-primary mb-4 flex items-center gap-2"
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+      >
+        <motion.span
+          className="h-1 w-8 bg-blueSurf"
+          initial={{ width: 0 }}
+          whileInView={{ width: 32 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        />
         {category.title}
-      </h3>
+      </motion.h3>
       {category.items.map((item, index) => {
         const itemId = `${category.title}-${index}`;
         const isItemOpen = isOpen === itemId;
@@ -123,7 +135,11 @@ const FAQAccordion = ({
         return (
           <motion.div
             key={itemId}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, delay: index * 0.05 }}
+            whileHover={{ scale: 1.01 }}
             className="border border-border rounded-lg bg-card/50 backdrop-blur-sm overflow-hidden hover:border-primary/50 transition-colors"
           >
             <button
@@ -134,7 +150,12 @@ const FAQAccordion = ({
               <span className="font-medium text-foreground group-hover:text-primary transition-colors">
                 {item.question}
               </span>
-              <ChevronDown className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              <motion.div
+                animate={{ rotate: isItemOpen ? 180 : 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                <ChevronDown className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              </motion.div>
             </button>
 
             <AnimatePresence>
@@ -171,52 +192,109 @@ export default function Faq() {
       className="max-w-7xl mx-auto px-6 py-24 relative overflow-hidden bg-gradient-subtle"
     >
       <div className="text-center mb-20">
-        <div className="inline-flex items-center gap-2 bg-white text-blueSurf border-blueSurf border px-4 py-2 rounded-full lg:text-lg text-sm font-light mb-6">
+        <motion.div
+          className="inline-flex items-center gap-2 bg-white text-blueSurf border-blueSurf border px-4 py-2 rounded-full lg:text-lg text-sm font-light mb-6"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+        >
           <MessageCircleQuestionMark className="w-4 h-4" />
           Questions fréquentes
-        </div>
-        <h2 className="text-5xl font-bold text-slate-900 mb-6">
+        </motion.div>
+        <motion.h2
+          className="text-5xl font-bold text-slate-900 mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
+        >
           Des questions ? J&apos;ai les{" "}
           <span className="text-blueSurf">réponses.</span>
-        </h2>
-        <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+        </motion.h2>
+        <motion.p
+          className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
+        >
           Tout ce que vous devez savoir avant de lancer votre projet web.
           Transparence, clarté et solutions concrètes pour vous aider à décider
           en toute confiance.
-        </p>
+        </motion.p>
       </div>
 
       <div className="max-w-4xl mx-auto relative z-10">
         {/* FAQ Content */}
         <div className="space-y-12">
-          {faqData.map((category) => (
-            <FAQAccordion
+          {faqData.map((category, index) => (
+            <motion.div
               key={category.title}
-              category={category}
-              isOpen={openItem}
-              onToggle={handleToggle}
-            />
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
+            >
+              <FAQAccordion
+                category={category}
+                isOpen={openItem}
+                onToggle={handleToggle}
+              />
+            </motion.div>
           ))}
         </div>
       </div>
 
       {/* CTA Section */}
-      <div className="mt-24 bg-gradient-to-br from-blueSurf-50 to-blueSurf-50 border-2 border-blueSurf-200 rounded-2xl p-12 text-center">
-        <h2 className="text-3xl font-bold text-slate-900 mb-4">
+      <motion.div
+        className="mt-24 bg-gradient-to-br from-blueSurf-50 to-blueSurf-50 border-2 border-blueSurf-200 rounded-2xl p-12 text-center"
+        initial={{ opacity: 0, y: 30, scale: 0.95 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <motion.h2
+          className="text-3xl font-bold text-slate-900 mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+        >
           Vous avez une vision ? Concrétisons-la ensemble.
-        </h2>
-        <p className="text-lg text-slate-700 mb-8 max-w-2xl mx-auto">
+        </motion.h2>
+        <motion.p
+          className="text-lg text-slate-700 mb-8 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+        >
           Parlons de vos ambitions et bâtissons un site à votre image, capable
           de séduire et fidéliser votre audience.
-        </p>
-        <a
+        </motion.p>
+        <motion.a
           href="#contact"
-          className="inline-flex items-center gap-2 bg-blueSurf-600 hover:bg-blueSurf-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
+          className="inline-flex items-center gap-2 bg-blueSurf-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.3 }}
+          whileHover={{
+            scale: 1.05,
+            backgroundColor: "#0c5282",
+            boxShadow: "0 20px 25px -5px rgba(14, 116, 144, 0.3)",
+          }}
+          whileTap={{ scale: 0.98 }}
         >
           Démarrer votre projet
           <span className="text-xl">→</span>
-        </a>
-      </div>
+        </motion.a>
+      </motion.div>
     </section>
   );
 }
