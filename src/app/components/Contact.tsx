@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Phone, Linkedin, Mail, Send, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface FormState {
   name: string;
@@ -79,46 +80,114 @@ export default function Contact() {
     <section className="max-w-7xl mx-auto px-6 py-24" id="contact">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-white text-blueSurf border-blueSurf border px-4 py-2 rounded-full lg:text-lg text-sm font-light mb-6">
+          <motion.div
+            className="inline-flex items-center gap-2 bg-white text-blueSurf border-blueSurf border px-4 py-2 rounded-full lg:text-lg text-sm font-light mb-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
             <Mail className="w-6 h-6" />
             Discutons ensemble
-          </div>
-          <h2 className="text-5xl font-bold text-slate-900 mb-6">
+          </motion.div>
+          <motion.h2
+            className="text-5xl font-bold text-slate-900 mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
+          >
             Prêt à transformer{" "}
             <span className="text-blueSurf">votre vision</span> en réalité ?
-          </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          </motion.h2>
+          <motion.p
+            className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
+          >
             Contactez-moi pour discuter de votre projet. Je serai ravi de
             comprendre vos besoins et vous proposer une solution web performante
             et convertissante.
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           <div className="space-y-6">
-            <div className="bg-gradient-to-br from-blueSurf-50 to-blue-50 rounded-3xl p-8 border-2 border-blueSurf-200">
-              <div className="mb-6">
+            <motion.div
+              className="bg-gradient-to-br from-blueSurf-50 to-blue-50 rounded-3xl p-8 border-2 border-blueSurf-200"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              whileHover={{ scale: 1.02, y: -5 }}
+            >
+              <motion.div
+                className="mb-6"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+              >
                 <span className="inline-block px-3 py-1 rounded-full bg-blueSurf-100 text-blueSurf-700 text-sm font-semibold mb-3">
                   Réactivité garantie
                 </span>
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
+              </motion.div>
+              <motion.h3
+                className="text-xl font-bold text-slate-900 mb-3"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.15 }}
+              >
                 Réponse sous 24 heures
-              </h3>
-              <p className="text-slate-700 mb-4">
+              </motion.h3>
+              <motion.p
+                className="text-slate-700 mb-4"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+              >
                 Je vous réponds rapidement pour discuter de votre projet et
                 trouver la meilleure solution pour vos besoins.
-              </p>
-              <div className="flex items-center gap-2 text-cyan-600 font-semibold">
+              </motion.p>
+              <motion.div
+                className="flex items-center gap-2 text-cyan-600 font-semibold"
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.25 }}
+                whileHover={{ x: 5 }}
+              >
                 <span>Disponible et à l&apos;écoute</span>
                 <ArrowRight size={18} />
-              </div>
-            </div>
-            <div className="bg-white rounded-3xl p-8 shadow-lg border border-slate-100">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="flex items-center justify-center h-14 w-14 rounded-2xl bg-cyan-100">
+              </motion.div>
+            </motion.div>
+            <motion.div
+              className="bg-white rounded-3xl p-8 shadow-lg border border-slate-100"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+              whileHover={{ scale: 1.02, y: -5 }}
+            >
+              <motion.div
+                className="flex items-start gap-4 mb-6"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                whileHover={{ x: 5 }}
+              >
+                <motion.div
+                  className="flex items-center justify-center h-14 w-14 rounded-2xl bg-cyan-100"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
                   <Mail size={28} className="text-blueSurf-600" />
-                </div>
+                </motion.div>
                 <div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">
                     Email
@@ -130,11 +199,22 @@ export default function Contact() {
                     famibellenohoarii@gmail.com
                   </a>
                 </div>
-              </div>
-              <div className="flex items-start gap-4 mb-6">
-                <div className="flex items-center justify-center h-14 w-14 rounded-2xl bg-cyan-100">
+              </motion.div>
+              <motion.div
+                className="flex items-start gap-4 mb-6"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.3 }}
+                whileHover={{ x: 5 }}
+              >
+                <motion.div
+                  className="flex items-center justify-center h-14 w-14 rounded-2xl bg-cyan-100"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
                   <Phone size={28} className="text-blueSurf-600" />
-                </div>
+                </motion.div>
                 <div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">
                     Téléphone
@@ -146,11 +226,22 @@ export default function Contact() {
                     +33 7 44 41 58 57
                   </a>
                 </div>
-              </div>
-              <div className="flex items-start gap-4 mb-6">
-                <div className="flex items-center justify-center h-14 w-14 rounded-2xl bg-cyan-100">
+              </motion.div>
+              <motion.div
+                className="flex items-start gap-4 mb-6"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+                whileHover={{ x: 5 }}
+              >
+                <motion.div
+                  className="flex items-center justify-center h-14 w-14 rounded-2xl bg-cyan-100"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
                   <Linkedin size={28} className="text-blueSurf-600" />
-                </div>
+                </motion.div>
                 <div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">
                     Linkedin
@@ -162,12 +253,23 @@ export default function Contact() {
                     Nohoarii FAMIBELLE
                   </a>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
-          <div className="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-slate-100">
+          <motion.div
+            className="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-slate-100"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
             <form className="space-y-6" onSubmit={handleSubmit} noValidate>
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+              >
                 <label
                   htmlFor="name"
                   className="block text-sm font-semibold text-slate-900 mb-3"
@@ -186,9 +288,14 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                 />
-              </div>
+              </motion.div>
 
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+              >
                 <label
                   htmlFor="email"
                   className="block text-sm font-semibold text-slate-900 mb-3"
@@ -207,9 +314,14 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                 />
-              </div>
+              </motion.div>
 
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.3 }}
+              >
                 <label
                   htmlFor="message"
                   className="block text-sm font-semibold text-slate-900 mb-3"
@@ -228,12 +340,23 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                 />
-              </div>
+              </motion.div>
 
-              <button
+              <motion.button
                 type="submit"
-                className="w-full bg-blueSurf-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blueSurf-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none group hover:cursor-pointer"
+                className="w-full bg-blueSurf-500 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed group hover:cursor-pointer"
                 disabled={status.type === "loading"}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+                whileHover={{
+                  scale: 1.02,
+                  backgroundColor: "#0c5282",
+                  boxShadow: "0 20px 25px -5px rgba(14, 116, 144, 0.3)",
+                  y: -2,
+                }}
+                whileTap={{ scale: 0.98 }}
               >
                 <>
                   <Send
@@ -244,32 +367,46 @@ export default function Contact() {
                   />
                   {status.type === "loading" ? "Envoi en cours..." : "Envoyer"}
                 </>
-              </button>
+              </motion.button>
 
               {status.type === "success" && (
-                <p
+                <motion.p
                   className="text-sm text-green-600 text-center"
                   role="status"
                   aria-live="polite"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
                 >
                   {status.message}
-                </p>
+                </motion.p>
               )}
               {status.type === "error" && (
-                <p
+                <motion.p
                   className="text-sm text-red-600 text-center"
                   role="alert"
                   aria-live="assertive"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
                 >
                   {status.message}
-                </p>
+                </motion.p>
               )}
 
-              <p className="text-xs text-slate-500 text-center">
+              <motion.p
+                className="text-xs text-slate-500 text-center"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.5 }}
+              >
                 Vos données sont traitées de manière confidentielle.
-              </p>
+              </motion.p>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
