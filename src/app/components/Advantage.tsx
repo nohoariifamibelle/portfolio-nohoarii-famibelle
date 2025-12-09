@@ -1,4 +1,5 @@
 import { HandHelping } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface CardProps {
   title: string;
@@ -6,6 +7,7 @@ interface CardProps {
   colorScheme: "lightBlue" | "darkBlue" | "white";
   visual: React.ReactNode;
   className?: string;
+  index?: number;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -14,9 +16,10 @@ const Card: React.FC<CardProps> = ({
   colorScheme,
   visual,
   className = "",
+  index = 0,
 }) => {
   const baseClasses =
-    "rounded-3xl transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col justify-between";
+    "rounded-3xl flex flex-col justify-between";
 
   const colorClasses = {
     lightBlue: "bg-blueSurf-50 border-2 border-blueSurf-200",
@@ -42,16 +45,62 @@ const Card: React.FC<CardProps> = ({
       : "text-base md:text-lg leading-relaxed text-gray-700";
 
   return (
-    <div className={`${baseClasses} ${colorClasses[colorScheme]} ${className}`}>
+    <motion.div
+      className={`${baseClasses} ${colorClasses[colorScheme]} ${className}`}
+      initial={{ opacity: 0, y: 30, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{
+        duration: 0.5,
+        delay: index * 0.1,
+        ease: "easeOut",
+      }}
+      whileHover={{
+        scale: 1.02,
+        boxShadow:
+          colorScheme === "darkBlue"
+            ? "0 25px 50px -12px rgba(59, 130, 246, 0.25)"
+            : "0 25px 50px -12px rgba(0, 0, 0, 0.15)",
+      }}
+      whileTap={{ scale: 0.98 }}
+    >
       <div>
-        <h3 className={`${titleSizeClasses} ${textColorClasses[colorScheme]}`}>
+        <motion.h3
+          className={`${titleSizeClasses} ${textColorClasses[colorScheme]}`}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: index * 0.1 + 0.1 }}
+        >
           {title}
-        </h3>
-        <p className={descriptionClasses}>{description}</p>
+        </motion.h3>
+        <motion.p
+          className={descriptionClasses}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
+        >
+          {description}
+        </motion.p>
       </div>
 
-      <div className="mt-6 flex justify-center md:justify-end">{visual}</div>
-    </div>
+      <motion.div
+        className="mt-6 flex justify-center md:justify-end"
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.4,
+          delay: index * 0.1 + 0.3,
+          type: "spring",
+          stiffness: 200,
+          damping: 15,
+        }}
+      >
+        {visual}
+      </motion.div>
+    </motion.div>
   );
 };
 
@@ -60,19 +109,37 @@ export default function Advantage() {
     <section id="advantages" className="max-w-7xl mx-auto px-6 bg-white py-24">
       {/* Section Header */}
       <div className="text-center mb-20">
-        <div className="inline-flex items-center gap-2 bg-white text-blueSurf border-blueSurf border px-4 py-2 rounded-full lg:text-lg text-sm font-light mb-6">
+        <motion.div
+          className="inline-flex items-center gap-2 bg-white text-blueSurf border-blueSurf border px-4 py-2 rounded-full lg:text-lg text-sm font-light mb-6"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+        >
           <HandHelping className="w-4 h-4" />
           Comment j&apos;aide mes clients
-        </div>
-        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+        </motion.div>
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold text-slate-900 mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
+        >
           Votre site actuel vous{" "}
           <span className="text-blueSurf-600">coûte des clients</span> chaque
           jour
-        </h2>
-        <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+        </motion.h2>
+        <motion.p
+          className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
+        >
           La plupart des PME perdent 60% de leurs opportunités à cause d&apos;un
           site qui ne convertit pas. Voici comment je corrige ça.
-        </p>
+        </motion.p>
       </div>
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-6 auto-rows-fr lg:auto-rows-auto">
@@ -82,6 +149,7 @@ export default function Advantage() {
             description="Chaque fonctionnalité est pensée pour transformer vos visiteurs en clients."
             colorScheme="lightBlue"
             className="lg:col-span-3 lg:row-span-1 p-4 md:p-8 min-h-[200px]"
+            index={0}
             visual={
               <div className="w-full">
                 <div className="flex gap-2 items-end justify-center mb-4">
@@ -111,6 +179,7 @@ export default function Advantage() {
             description="Votre site web professionnel livré en quelques semaines, sans compromis sur la qualité ni la performance."
             colorScheme="darkBlue"
             className="lg:col-span-5 lg:row-span-1 p-8 md:p-10 min-h-[200px]"
+            index={1}
             visual={
               <div className="flex flex-col items-center justify-center my-8">
                 <div
@@ -130,6 +199,7 @@ export default function Advantage() {
             description="Un site ultra-rapide, optimisé pour Google et conçu pour offrir une expérience utilisateur exceptionnelle qui fidélise vos visiteurs."
             colorScheme="white"
             className="lg:col-span-4 lg:row-span-1 p-6 md:p-8 min-h-[200px] border-2 border-gray-200"
+            index={2}
             visual={
               <div className="relative inline-block">
                 <div
@@ -152,6 +222,7 @@ export default function Advantage() {
             description="De la stratégie initiale à l'optimisation continue, je gère l'intégralité de votre projet pour que vous puissiez vous concentrer sur votre business."
             colorScheme="white"
             className="lg:col-span-7 lg:row-span-1 p-8 md:p-6 min-h-[200px] border-2 border-gray-200"
+            index={3}
             visual={
               <div className="flex items-center justify-center gap-2 w-full flex-wrap">
                 <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold shadow-md">
@@ -175,6 +246,7 @@ export default function Advantage() {
             description="Plus de 20 projets avec des entrepreneurs comme vous : je comprends vos enjeux et je parle votre langage business, pas juste du code."
             colorScheme="lightBlue"
             className="lg:col-span-5 lg:row-span-1 p-6 md:p-8 min-h-[200px]"
+            index={4}
             visual={
               <div className="flex flex-col items-center gap-2">
                 <div className="inline-flex items-center bg-blueSurf text-white px-6 py-3 rounded-full shadow-lg">
