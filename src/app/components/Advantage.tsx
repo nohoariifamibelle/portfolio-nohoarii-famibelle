@@ -18,8 +18,7 @@ const Card: React.FC<CardProps> = ({
   className = "",
   index = 0,
 }) => {
-  const baseClasses =
-    "rounded-3xl flex flex-col justify-between";
+  const baseClasses = "rounded-3xl flex flex-col justify-between";
 
   const colorClasses = {
     lightBlue: "bg-blueSurf-50 border-2 border-blueSurf-200",
@@ -106,7 +105,7 @@ const Card: React.FC<CardProps> = ({
 
 export default function Advantage() {
   return (
-    <section id="advantages" className="max-w-7xl mx-auto px-6 bg-white py-24">
+    <section id="advantage" className="max-w-7xl mx-auto px-6 bg-white py-24">
       {/* Section Header */}
       <div className="text-center mb-20">
         <motion.div

@@ -9,6 +9,7 @@ import { ArrowRight, MoonIcon, SunIcon } from "lucide-react";
 // Liens de navigation centralisés pour éviter la duplication
 const NAV_LINKS = [
   { href: "/#top", label: "Accueil" },
+  { href: "/#advantage", label: "Bénéfices" },
   { href: "/#projects", label: "Mes réalisations" },
   { href: "/#services", label: "Services" },
   { href: "/#about", label: "À propos" },
