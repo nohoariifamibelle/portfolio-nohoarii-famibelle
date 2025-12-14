@@ -9,6 +9,8 @@ interface CardProps {
   className?: string;
   index?: number;
 }
+import Image from "next/image";
+import { assets } from "../../../assets/assets";
 
 const Card: React.FC<CardProps> = ({
   title,
@@ -239,32 +241,20 @@ export default function Advantage() {
             }
           />
 
-          {/* CARTE 5 - L'expertise PME qui fait la différence */}
+          {/* CARTE 5 - Un développeur, toutes les compétences */}
           <Card
-            title="L'expertise PME qui fait la différence"
-            description="Plus de 20 projets avec des entrepreneurs comme vous : je comprends vos enjeux et je parle votre langage business, pas juste du code."
-            colorScheme="lightBlue"
+            title="Un développeur, toutes les compétences"
+            description="Front-end, back-end, intégrations, déploiement : je gère chaque étape technique pour que vous n'ayez à vous soucier de rien."
+            colorScheme="darkBlue"
             className="lg:col-span-5 lg:row-span-1 p-6 md:p-8 min-h-[200px]"
             index={4}
             visual={
-              <div className="flex flex-col items-center gap-2">
-                <div className="inline-flex items-center bg-blueSurf text-white px-6 py-3 rounded-full shadow-lg">
-                  <span className="text-2xl" role="img" aria-label="trophy">
-                    🏆
-                  </span>
-                  <span className="font-bold text-lg">Expert PME</span>
-                </div>
-                <div className="flex gap-4 text-3xl">
-                  <span role="img" aria-label="store">
-                    🏪
-                  </span>
-                  <span role="img" aria-label="briefcase">
-                    💼
-                  </span>
-                  <span role="img" aria-label="factory">
-                    🏭
-                  </span>
-                </div>
+              <div>
+                <Image
+                  src={assets.carrousel_technos_black}
+                  alt="Carrousel de technologies"
+                  className="rounded-xl w-full object-cover"
+                />
               </div>
             }
           />

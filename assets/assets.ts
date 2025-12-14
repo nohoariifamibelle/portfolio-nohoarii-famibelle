@@ -56,9 +56,13 @@ import github_icon from "./icons/tools/github-icon.svg";
 import git_icon from "./icons/tools/git-icon.svg";
 import vscode_icon from "./icons/tools/vscode-icon.svg";
 import fbb_bg from "./projects/bg-fbb.png";
+import carrousel_technos from "./img/carrousel_technos-blue.png";
+import carrousel_technos_black from "./img/carrousel_technos-blind.png";
 
 // ------------------ Objet assets ------------------
 export const assets = {
+  carrousel_technos_black,
+  carrousel_technos,
   fbb_bg,
   code_icon,
   code_icon_dark,
